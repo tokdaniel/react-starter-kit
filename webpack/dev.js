@@ -13,7 +13,7 @@ const plugins = [
     inject: true
   }),
   new WebpackNotifierPlugin({
-    title: 'CX-Ray development build',
+    title: 'Build succesful!',
     alwaysNotify: true
   }),
   new webpack.DefinePlugin({
