@@ -1,0 +1,26 @@
+{
+  "presets": [
+    "env",
+    "react"
+  ],
+  "env": {
+    "prod": {
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties"
+      ]
+    },
+    "dev": {
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties"
+      ]
+    }
+  }
+}

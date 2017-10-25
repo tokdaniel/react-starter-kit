@@ -1,0 +1,17 @@
+{
+  "someId": "123thisIsAnId",
+  "someData": [
+    {
+      "name": "item1",
+      "attribute": "value"
+    },
+    {
+      "name": "item2",
+      "attribute": "value2"
+    },
+    {
+      "name": "item13",
+      "attribute": "value3"
+    }
+  ]
+}
