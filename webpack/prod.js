@@ -40,7 +40,7 @@ const plugins = [
     minRatio: 0.8
   }),
   new WebpackNotifierPlugin({
-    title: 'CX-Ray production build',
+    title: 'Production build succesful!',
     alwaysNotify: true
   }),
   new webpack.DefinePlugin({
