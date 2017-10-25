@@ -50,7 +50,4 @@ __use like:__ ```npm run <command>```
 * __test__: run all existing unit tests
 * __test:watch__: watch tests and test related files for change and only rerun the changed ones
 * __test:coverage__: run all existing unit tests, and show coverage info at the end
-* __lint__: check code for correct linting (airbnb and some custom rules in .eslintrc, tests are ignored),
-
-For now only the development build exists, this includes some development tools. 
-__Pushing will trigger the husky prepush hook which is going to run linting and tests. If any error is present, the push wont happen.__
+* __lint__: check code for correct linting (airbnb and some custom rules in .eslintrc, tests are ignored)
