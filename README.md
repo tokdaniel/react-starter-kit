@@ -1,7 +1,6 @@
 # README #
 
-### This is the repository for CX-Ray survey ui###
-## This repository is an experiment, with functional principles in react using RECOMPOSE enhancers. ##
+### This is a starter kit for React developers##
 
 ### Notable Technologies ###
 
