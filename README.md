@@ -1,6 +1,6 @@
 # README #
 
-### This is a starter kit for React developers##
+### This is a starter kit for React developers ###
 
 ### Notable Technologies ###
 
