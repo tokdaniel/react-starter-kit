@@ -3,6 +3,7 @@
   "rules": {
     "global-require": "off",
     "linebreak-style": "off",
+    "no-case-declarations": "off",
     "comma-dangle": [
       "error",
       "never"

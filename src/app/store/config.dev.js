@@ -1,18 +1,20 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
+import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
-import { createLogger } from 'redux-logger';
-import thunk from 'redux-thunk';
 
-import rootReducer from '../reducers/index';
+import { rootReducer } from '../reducers';
+import { rootEpic } from '../epics';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export const history = createBrowserHistory();
-const logger = createLogger();
 const router = routerMiddleware(history);
+const epic = createEpicMiddleware(rootEpic);
 
-const store = createStore(
+export const store = createStore(
   rootReducer,
-  applyMiddleware(thunk, router, logger)
+  composeEnhancers(
+    applyMiddleware(router, epic)
+  )
 );
-
-export default store;

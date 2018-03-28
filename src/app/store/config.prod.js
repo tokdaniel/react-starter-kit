@@ -1,16 +1,17 @@
 import { createStore, applyMiddleware } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
+import { createEpicMiddleware } from 'redux-observable';
 import { createBrowserHistory } from 'history';
-import thunk from 'redux-thunk';
 
-import rootReducer from '../reducers/index';
+
+import { rootReducer } from '../reducers';
+import { rootEpic } from '../epics';
 
 export const history = createBrowserHistory();
 const router = routerMiddleware(history);
+const epic = createEpicMiddleware(rootEpic);
 
-const store = createStore(
+export const store = createStore(
   rootReducer,
-  applyMiddleware(thunk, router)
+  applyMiddleware(router, epic)
 );
-
-export default store;
